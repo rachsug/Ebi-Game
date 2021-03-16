@@ -65,9 +65,9 @@ Sounds.prototype.playSound = function(soundName) {
 };
 
 Sounds.prototype.mute = function() {
-    if(this.muted == false) {
+    if(!this.muted) {
         this.muted = true;
-    } else if (this.muted == true) {
+    } else if (this.muted) {
         this.muted = false;
     }
 };
