@@ -72,11 +72,10 @@ InGamePosition.prototype.entry = function (play) {
     const columns = this.setting.balloonColumns;
     const balloonsInitial = [];
 
-    let line, column;
+    let line, column, x, y;
     for (line = 0; line < lines; line++) {
         for (column = 0; column < columns; column++) {
             this.object = new Objects();
-            let x,y;
             x = (play.width/2) + (column * 50) + ((columns - 1)*35);
             y = (play.playBoundaries.top + 30) + (line * 50);
             balloonsInitial.push(this.object.balloon(
