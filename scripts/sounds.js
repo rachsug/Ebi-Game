@@ -24,7 +24,7 @@ Sounds.prototype.init = function() {
     this.sound5.setAttribute("preload","auto");
 
     this.sound6 = new Audio();
-    this.sound6.src = "sounds/danceMagic.wav";
+    this.sound6.src = "sounds/DanceMagic.wav";
     this.sound6.setAttribute("preload","auto");
     
 };
@@ -32,7 +32,6 @@ Sounds.prototype.init = function() {
 Sounds.prototype.playSound = function(soundName) {
 
     if(this.muted == true) {
-        document.querySelectorAll("Audio").forEach( elem => muteMe(elem) );
         return;
     }
     if(soundName == 'shot') {

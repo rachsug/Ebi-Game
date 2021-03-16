@@ -1,7 +1,7 @@
 function OpeningPosition() {
     this.mute = null;
     this.unmute = null;
-    
+    play.sounds.playSound('background');
 }
 
 OpeningPosition.prototype.draw = function(play) {
