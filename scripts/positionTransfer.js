@@ -1,7 +1,7 @@
 function TransferPosition(level) {
     this.level = level;
     this.opacity = 1;
-    play.sounds.playSound('background');
+    //play.sounds.playSound('background');
 }
 
 TransferPosition.prototype.update = function(play) {
