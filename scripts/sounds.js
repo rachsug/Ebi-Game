@@ -60,14 +60,24 @@ Sounds.prototype.playSound = function(soundName) {
     }
 
     if(soundName == 'background') {
+        if (typeof this.sound6.loop == 'boolean') {
+            this.sound6.loop = true;
+        } else {
+            this.sound6.addEventListener('ended', function() {
+                this.sound6.play();
+                this.sound6.currentTime = 0;
+            }, false);
+        }
         this.sound6.play();
-    } 
+    }
 };
 
 Sounds.prototype.mute = function() {
     if(!this.muted) {
+        this.sound6.pause();
         this.muted = true;
     } else if (this.muted) {
+        this.sound6.play();
         this.muted = false;
     }
 };
